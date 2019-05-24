@@ -13,7 +13,6 @@ class PresentationView(APIView):
     def get(self, request):
 	    serializer = PresentationSerializer(Presentation.objects.all(), many=True)
 	    response = {"presentations": serializer.data}
-	    #response = "todo ok"
 	    return Response(response, status=status.HTTP_200_OK)
 
 
